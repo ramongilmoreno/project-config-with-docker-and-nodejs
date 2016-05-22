@@ -32,6 +32,6 @@ The updated source files will be put in the build directory:
     
 ## System requirements
 
-This script has been tested in *Linux* as it uses *Docker* containers to
+This script has been tested in **Linux** as it uses **Docker** containers to
 run the `node:6.1` image to evaluate JavaScript config files and the
 configuration substitution script.
