@@ -94,6 +94,8 @@ function produceSingleFile (index) {
 		
 	});
 	output.on('finish', function () {
+                // Apply original file flags
+		fs.chmodSync(buildDir + files[index], fs.statSync(startDir + files[index]).mode);
 		produceSingleFile(++index);
 	});
 };
