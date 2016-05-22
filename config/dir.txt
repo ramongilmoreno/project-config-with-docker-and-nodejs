@@ -1,0 +1,7 @@
+All *.js files in this directory will be run in order to complete
+or change the default configuration.
+
+Just for top level *.js files.
+
+Deeper files won't be run.
+

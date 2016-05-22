@@ -1,0 +1,34 @@
+Sample source file with code substutions:
+
+     First config value is: [==CONFIG== config.firstConfigValue ==CONFIG==] 
+    Second config value is: [==CONFIG== config.secondConfigValue ==CONFIG==] 
+
+More complex config:
+
+==CONFIG==
+(function () {
+    var keys = Object.keys(config.moreComplexConfig);
+    var r = [];
+    for (var i in keys) {
+        var v = keys[i];
+        r.push("   " + v + ": " + config.moreComplexConfig[v]);
+    }
+    return r.join('\n');
+})()
+==CONFIG==
+
+Arrays based config:
+
+==CONFIG==
+(function () {
+    var keys = Object.keys(config.arrayBasedConfig);
+    var r = [];
+    for (var i in keys) {
+        var v = keys[i];
+        r.push("   " + config.arrayBasedConfig[v]);
+    }
+    return r.join('\n');
+})()
+==CONFIG==
+
+End.
