@@ -1,4 +1,4 @@
-# Configure project properties with Javascript
+# Configure project properties with JavaScript
 
 ## Introduction
 
