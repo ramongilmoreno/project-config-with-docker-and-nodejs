@@ -78,8 +78,13 @@ function produceSingleFile (index) {
 		}
 		if (isMatch) {
 			if (inCode) {
-				// console.log("Evaluating: " + inCode);
-				output.write(eval(inCode));
+				var value = eval(inCode);
+				// http://stackoverflow.com/a/6286551
+				if (!(typeof value === 'string')) {
+					// Convert to string and keep undefined string too
+					value = "" + value;
+				}
+				output.write(value);
 				inCode = undefined;
 			} else {
 				inCode = "";
